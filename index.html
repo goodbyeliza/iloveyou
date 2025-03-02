@@ -7,28 +7,56 @@
 </head>
 <body>
     <style>
-        body{
+        body {
+            padding: 2vw;
             display: flex;
-            background-color: gray;
-            color: pink;
+            background-color: black;
             font-weight: bold;
             font-size: 5vws;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        #MainContainer{
+
+        #MainContainer,
+        #startcontainer
+        {
             display: flex;
+            display: none;
             width: 100%;
+            max-width: 100%;
             justify-content: center;
             align-items: center;
             text-align: center;
             flex-direction: column;
+            overflow: hidden;
+            padding: 10px;
         }
-        #label1{
+        #startcontainer{
+            display: flex;
+            display: none;
+        }
+        #label1,
+        #label2
+        {
+            color: black;
+            background-color: pink;
+            border-radius: 0.2vw;
+            padding: 1vw;
             font-size: 7vw;
+            max-width: 90%;
+            white-space: normal;  /* Prevent word breaking in the middle */
+            word-wrap: break-word;  /* Allow word breaks only at spaces */
+            overflow-wrap: break-word; /* Prevent overflow */
         }
-        #NextButton{
-            border-radius: 5vw;
-            font-family: 'Dancing Script', cursive;
+        #label2{
+            color: black;
+            background-color: red;
+        }
+        #NextButton,
+        #NextButton2,
+        #continue
+        {
+            border-radius: 0.2vw;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: 5vw;
             color: pink;
             background-color: transparent;
@@ -39,52 +67,143 @@
             width: 30vw;
             height: 6vh;
         }
+        #Nextbutton2,
+        #continue
+        {
+            border-color: red;
+            color: red;
+        }
+        #continue{
+            color: cyan;
+            border-color: cyan;
+        }
+        #landingpage{
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #welcome{
+            color: black;
+            background-color: cyan;
+            padding: 2vw;
+            display: block;
+        }
     </style>
+    <div id="landingpage">
+        <p id="welcome">Welcome, before you enter, Please Wear earphones! <br>
+            This is my final Goodbye. <br>
+            Thank you for going on here once again, I hope you go through everything <br>
+            Press Continue
+        </p>
+        <button id="continue">Continue</button>
+    </div>
+    <div id="startcontainer">
+        <label id="label2">
+            Press 'Next' to Start Interaction
+        </label>
+        <button id="NextButton2">Next</button>
+    </div>
     <div id="MainContainer">
         <label id="label1">Press 'Next' to Start Interaction</label>
         <button id="NextButton">Next</button>
     </div>
+
     <script>
+        let vc1 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc1.mp3")
+        let vc2 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc2.mp3")
+        let vc3 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc3.mp3")
+        let vc4 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc4.mp3")
+        let vc5 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc5.mp3")
+        let vc6 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc6.mp3")
+        let vc7 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vcü.mp3")
+        let vc8 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc8.mp3")
+        let vc9 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc9.mp3")
+        let vc10 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc10.mp3")
+        let vc11 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc11.mp3")
+        let vc12 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc12.mp3")
+        let vc13 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc13.mp3")
+        let vc14 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc14.mp3")
+        let vc15 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc15.mp3")
+        let vc16 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc16.mp3")
+        let vc17 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc17.mp3")
+        let vc18= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc18.mp3")
+        let vc19= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc19.mp3")
+        let vc20= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc20.mp3")
+        let vc21= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc21.mp3")
+        let vc22= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc22.mp3")
+        let vc23 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc23.mp3")
+        let vc24 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc24.mp3")
+        let vc25 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc25.mp3")
+        let vc26 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc26.mp3")
+        let vc27 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc27.mp3")
+        let vc28 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc28.mp3")
+        let vc29 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc29.mp3")
+        let vc30 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc30.mp3")
+        let vc31 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc31.mp3")
+        let vc32 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc32.mp3")
+        let vc33 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc33.mp3")
+        let vc34 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc34.mp3")
+        let vc35 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc35.mp3")
+        let vc36 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc36.mp3")
+        let vc37 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc37.mp3")
+        let vc38 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc38.mp3")
+        let vc39 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc39.mp3")
+        let vc40 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc40.mp3")
+        let vc41 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc41.mp3")
+        let vc42 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc42.mp3")
+        let vc43 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc43.mp3")
+        let vc44 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc44.mp3")
+        let vc45 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc45.mp3")
+        let vc46= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc46.mp3")
+        let vc47= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc47.mp3")
+        let vc48= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc48.mp3")
+        let vc49= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc49.mp3")
+        let vc50= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc50.mp3")
+        let vc51= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc51.mp3")
+        let vc52= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc52.mp3")
+        let vc53= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc53.mp3")
+        let vc54 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc54.mp3")
+        let vc55 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc55.mp3")
+        let vc56 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc56.mp3")
+        let vc57 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc57.mp3")
+        let vc58 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc58.mp3")
+        let vc59 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc59.mp3")
+        let vc60 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc60.mp3")
+        let vc61 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc61.mp3")
+        let vc62= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc62.mp3")
+        let vc63= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc63.mp3")
+        let vc64= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc64.mp3")
+        let vc65= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc65.mp3")
+        let vc66= new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc66.mp3")
+        let vc67 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc67.mp3")
+        let vc68 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc68.mp3")
+        let vc69 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc69.mp3")
+        let vc70 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc70.mp3")
+        let vc71 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc71.mp3")
+        let vc72 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc72.mp3")
+        let vc73 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc73.mp3")
+        let vc74 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc74.mp3")
+        let vc75 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc75.mp3")
+        let vc76 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc76.mp3")
+        let vc77 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc77.mp3")
+        let vc78 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc78.mp3")
+        let vc79 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc79.mp3")
+        let vc80 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc80.mp3")
+        let vc81 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc81.mp3")
+        let vc82 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc82.mp3")
+        let vc83 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc83.mp3")
+        let vc84 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc84.mp3")
+        let vc85 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc85.mp3")
+        let vc86 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc86.mp3")
+        let vc87 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc87.mp3")
+        let vc88 = new Audio("https://raw.githubusercontent.com/goodbyeliza/iloveyou/main/vc88.mp3")
+      
+
         let texts = [
-            "Press 'Next' to Start Interaction",
             "Hello Liza,",
-            "I originally wanted to start off with voice lines",
-            "But This has a different start because",
-            "I finished making everything and",
-            "My mom came in",
-            "She told me that your mom reported me to the police",
-            "And that I made accounts of you and making Porn AI with your face",
-            "I get it now liza",
-            "You dont love me anymore",
-            "And its all my fault",
-            "Im like a stalker",
-            "Like a disgusting creep and I made you feel fear",
-            "Im sorry",
-            "You'll tell your next boyfriend what a stalker I was",
-            "I wish I never begged you",
-            "I Wish I always left you alone and to be by yourself to have you have your space",
-            "And things would fix themselves",
-            "Now its too late, Even if I leave you alone",
-            "Now its all done",
-            "Im a stalker who is reported at the police",
-            "Thats all I am",
-            "I get it now liza",
-            "I always thought that If I begged you, one day you would forgive me",
-            "I was wrong",
-            "You genuinely wanted me to leave you alone",
-            "And I will do that now",
-            "My mom made it clear to never send you a message again because I will go to prison",
-            "But I just cant leave this how they are",
-            "I cant leave you to think that I am a creepy ex",
-            "And Im sorry for the soundcloud voice message yesterday",
-            "It was so creepy of me",
-            "I have to realize that you dont love me anymore",
-            "And my affection wont have an effect on you",
-            "So Im sorry liza",
-            "I shouldve left you alone",
-            "Nothing can be fixed anymore",
-            "When you click next now, My final goodbye",
-            "Elizabete Bojaruneca",
+            "Elizabete Bojaruneca", 
             "You thought I was done with you, didn't you?",
             "I bet you finally got Happy that I would leave you alone",
             "That's good for you",
@@ -157,20 +276,161 @@
             "I have no one to blame but myself",
             "Because If I didn't do what I did",
             "You'd still be calling me Your Baby Alexey to this day",
-            "Thank You for everything, Elizabete Bojaruneca",
+            "Thank You for everything, Elizabete Bojaruneca", 
             "And I hope that one day we will fix things",
             "And I hope one day that I will get to take your last name",
             "And to marry you",
             "To say 'Yes' when the Pastor asks me if I will love you forever",
-            "And saying 'Yes, I want' while looking in your beautiful shining eyes to when the Pastor aasks me If I want to marry you",
+            "And saying 'Yes, I want' while looking in your beautiful shining eyes to when the Pastor asks me If I want to marry you",
             "Because I don't want it to be anyone else but you",
             "I hope I will be Alexandros Bojarunecs",
             "I hope I get to take care of you when you're pregnant",
             "I hope I get to grow old with you",
             "And to love you for eternity",
             "Take care,",
-            "Elizabete Bojaruneca"
+            "Goobdye my Elizabete Bojaruneca"
+        ];
+
+        let audioFiles = [vc1, vc2, vc3, vc4, vc5, vc6, vc7, vc8, vc9, vc10, vc11, vc12, vc13, vc14, vc15, vc16, vc17, vc18, vc19, vc20, vc21, vc22, vc23, vc24, vc25, vc26, vc27, vc28, vc29, vc30, vc31, vc32, vc33, vc34, vc35, vc36, vc37, vc38, vc39, vc40, vc41, vc42, vc43, vc44, vc45, vc46, vc47, vc48, vc49, vc50, vc51, vc52, vc53, vc54, vc55, vc56, vc57, vc58, vc59, vc60, vc61, vc62, vc63, vc64, vc65, vc66, vc67, vc68, vc69, vc70, vc71, vc72, vc73, vc74, vc75, vc76, vc77, vc78, vc79, vc80, vc81, vc82, vc83, vc84, vc85, vc86, vc87, vc88];
+        
+
+        let textIndex = 0;
+        let nextbtn = document.getElementById("NextButton");
+
+
+        nextbtn.addEventListener("click", function () {
+            if (textIndex < texts.length) {
+                document.getElementById("label1").textContent = texts[textIndex];
+                audioFiles[textIndex].play();
+                textIndex++;
+
+                nextbtn.style.display = "none";
+
+                audioFiles[textIndex - 1].onended = function () {
+                    nextbtn.style.display = "block";
+                };
+            }
+            
+        });
+
+
+        let texts2 = [
+            "Press 'Next' to Start Interaction",
+            "I originally wanted to start off with voice lines",
+            "But This has a different start because",
+            "I finished making everything and",
+            "My mom came in",
+            "She told me that your mom reported me to the police",
+            "And that she said that I made accounts of you and making Porn AI with your face",
+            "I get it now liza",
+            "You dont love me anymore",
+            "And its all my fault",
+            "Im like a stalker",
+            "Like a disgusting creep and I made you feel fear",
+            "Im sorry",
+            "You'll tell your next boyfriend what a stalker I was",
+            "I wish I never begged you",
+            "I Wish I always left you alone and to be by yourself to have you have your space",
+            "And things would fix themselves",
+            "Now its too late, Even if I leave you alone",
+            "Now its all done",
+            "Im a stalker who is reported at the police",
+            "Thats all I am",
+            "I get it now liza",
+            "I always thought that If I begged you, one day you would forgive me",
+            "I was wrong",
+            "You genuinely wanted me to leave you alone",
+            "And I will do that now",
+            "My mom made it clear to never send you a message again because I will go to prison",
+            "But I just cant leave this how they are",
+            "I cant leave you to think that I am a creepy ex",
+            "And Im sorry for the soundcloud voice message yesterday",
+            "It was so creepy of me",
+            "I have to realize that you dont love me anymore",
+            "And my affection wont have an effect on you",
+            "So Im sorry liza",
+            "I shouldve left you alone",
+            "Nothing can be fixed anymore",
+            "I hope you won't remember me as the toxic stalker ex",
+            "Thats all I want now",
+            "All I want now is for you to not remember me as this",
+            "But as your Alexey who loved you",
+            "I feel like a criminal liza",
+            "And its literally all my fault",
+            "Why couldn't I just let you be from the beginning?",
+            "I'm sorry",
+            "You'll find a great guy. And I truly wish you the best liza",
+            "Things ended badly, but I will never forget you and our good memories",
+            "Especially summer",
+            "I will leave you alone now because",
+            "The police is investigating me because your mom said that I made porn AI of you or something",
+            "Honestly, I deserve that",
+            "If they arrest me for harrassing you then I deserve that",
+            "Only now I truly realize that what Im doing isnt romantic",
+            "You truly want to get away from me and you see me as a creepy stalker who gives you fear",
+            "You dont love me anymore and its all my fault",
+            "I will leave you alone",
+            "I promise",
+            "Just now i realized that it truly makes you happy",
+            "And you dont want me to chase you",
+            "You want me gone",
+            "And I will do that now",
+            "When you press Next now, thats my final goodbye to you, liza",
+            "Also, in that goodbye, I say that I will not leave you alone until I know that you dont love me anymore",
+            "That was before my mom told me that your mom reported me to the police",
+            "I dont know if you still love me or not",
+            "Probably not but",
+            "I have no other choice but to leave you alone",
+            "They will take me in soon I dont know when",
+            "But I just want to say, I would never do what your moms said I did",
+            "I dont know why she said that I think she was reffering to coreshark making that account",
+            "I messaged him about this and I blocked him",
+            "I will never talk to him again because he just gets me in trouble",
+            "Okay liza biza",
+            "When you press next now, thats my final goodbye",
+            "."
         ]
+
+        let indexx = 0;
+        let startp = document.getElementById("label2")
+        let audio = new Audio("https://raw.githubusercontent.com/lizasalexeysanniversary/gift/main/sound.mp3")
+        let nextbtn2 = document.getElementById("NextButton2")
+
+        function typeText(element, text, speed = 20){
+            element.innerHTML="";
+            let i = 0;
+            let sound = audio;
+            sound.play();
+            nextbtn2.style.display="none";
+            function typing(){
+                if (i < text.length){
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+
+                } else{
+                    sound.pause();
+                    sound.currentTime=0;
+                    nextbtn2.style.display="block";
+                }
+            
+    }
+    typing();
+}
+
+nextbtn2.onclick=function(){
+    indexx = (indexx+1) % texts2.length;
+    typeText(startp, texts2[indexx]);
+    if(texts2[indexx]==="."){
+        document.getElementById("startcontainer").style.display="none";
+        document.getElementById("MainContainer").style.display="flex";
+        document.body.style.backgroundColor="purple";
+    }
+}
+document.getElementById("continue").onclick=function(){
+    document.getElementById("landingpage").style.display="none";
+    document.getElementById("startcontainer").style.display="flex";
+}
     </script>
 </body>
 </html>
