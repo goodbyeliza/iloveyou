@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Year</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            background-color: gray;
+            color: pink;
+            font-weight: bold;
+            font-size: 5vws;
+            font-family: 'Dancing Script', cursive;
+        }
+        #MainContainer{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        #label1{
+            font-size: 7vw;
+        }
+        #NextButton{
+            border-radius: 5vw;
+            font-family: 'Dancing Script', cursive;
+            font-size: 5vw;
+            color: pink;
+            background-color: transparent;
+            border-style: solid;
+            border-width: 0.2vw;
+            border-color: pink;
+            margin-top: 5vh;
+            width: 30vw;
+            height: 6vh;
+        }
+    </style>
+    <div id="MainContainer">
+        <label id="label1">Press 'Next' to Start Interaction</label>
+        <button id="NextButton">Next</button>
+    </div>
+    <script>
+        let texts = [
+            "Press 'Next' to Start Interaction",
+            "Hello Liza,",
+            "I originally wanted to start off with voice lines",
+            "But This has a different start because",
+            "I finished making everything and",
+            "My mom came in",
+            "She told me that your mom reported me to the police",
+            "And that I made accounts of you and making Porn AI with your face",
+            "I get it now liza",
+            "You dont love me anymore",
+            "And its all my fault",
+            "Im like a stalker",
+            "Like a disgusting creep and I made you feel fear",
+            "Im sorry",
+            "You'll tell your next boyfriend what a stalker I was",
+            "I wish I never begged you",
+            "I Wish I always left you alone and to be by yourself to have you have your space",
+            "And things would fix themselves",
+            "Now its too late, Even if I leave you alone",
+            "Now its all done",
+            "Im a stalker who is reported at the police",
+            "Thats all I am",
+            "I get it now liza",
+            "I always thought that If I begged you, one day you would forgive me",
+            "I was wrong",
+            "You genuinely wanted me to leave you alone",
+            "And I will do that now",
+            "My mom made it clear to never send you a message again because I will go to prison",
+            "But I just cant leave this how they are",
+            "I cant leave you to think that I am a creepy ex",
+            "And Im sorry for the soundcloud voice message yesterday",
+            "It was so creepy of me",
+            "I have to realize that you dont love me anymore",
+            "And my affection wont have an effect on you",
+            "So Im sorry liza",
+            "I shouldve left you alone",
+            "Nothing can be fixed anymore",
+            "When you click next now, My final goodbye",
+            "Elizabete Bojaruneca",
+            "You thought I was done with you, didn't you?",
+            "I bet you finally got Happy that I would leave you alone",
+            "That's good for you",
+            "I know you're tired of your Ex-Boyfriend trying and coding some Bullshit",
+            "But I'm not done with you and I will never be done with you",
+            "Until I know that you don't love me anymore, I won't ever give up on us",
+            "I will never give up on us because I know how Important this is to me",
+            "I will never give up on you because I know how much my heart loves you",
+            "I will never give up on you because I know how badly I want to live my life with you",
+            "I know, I have to take your feelings into consideration",
+            "You don't want that anymore, you want space away from me",
+            "And I will give that to you",
+            "I made this, because I want you to smile again",
+            "I know the other website made you happy",
+            "And I'm glad my work payed off",
+            "I would do everything to see you smile",
+            "Even if that means leaving you alone",
+            "Maybe all of this isn't this serious",
+            "Maybe you call me cringe because you know that I try too hard",
+            "And If I just gave you space, soon enough you would come back to me",
+            "Maybe I am panicking too much",
+            "But I can't help myself",
+            "I can't stop thinking, What if someone takes you away from me",
+            "I don't know how to live with myself after that",
+            "I would do anything for a second chance",
+            "I would do anything to hear you laugh again",
+            "Anything to hear you talk to me again",
+            "Do anything to hear you say you love me again",
+            "I would do anything for you to me mine again",
+            "And I'm trying not to give weird ick Ex-Boyfriend Stalker vibes",
+            "I want you to know that, In real Life I wouldn't panic like this",
+            "The reason why I am now is because I know that the Block button is all that is needed",
+            "Block Button is all it takes, ",
+            "And If we were close, I would be calmer, knowing you're close to me",
+            "Whenever you block me it feels like I don't feel your presence anymore",
+            "Sorry I'm just talking about my own feelings",
+            "Yours are more important and I should take them into consideration",
+            "I can't possibly imagine what you felt that night",
+            "Because the hurt you must've felt probably was so bad",
+            "Because you loved me more than anything on this planet",
+            "I was your everything",
+            "And if me doing that changed that, It must've been pretty bad",
+            "I can't change what I did",
+            "Can't change the past but I wish I could",
+            "Was your Future Husband, Your boyfriend, your world, your baby, your Alexey",
+            "Now all I am is a Creepy Ex",
+            "I believe in romance",
+            "I don't know if you find this cringe as well",
+            "I hope it is romantic for you",
+            "But why should it be? It's from your Creepy ex boyfriend",
+            "I love you so much",
+            "I will love you for the rest of my life",
+            "Today is the day that we met eachother",
+            "And I don't regret a thing",
+            "I mean, I don't regret meeting you, I regret a lot of things",
+            "I regret starting useless urguements with you",
+            "I regret never trusting you",
+            "I regret whenever I muted you to grab your attention",
+            "I regret it all",
+            "I was toxic",
+            "I hope despite the bad memories, you remember all the good times we had together",
+            "Especially June until September, I think those were our best months",
+            "Especially July, where we called everyday",
+            "Where I woke up everyday to your Goodmorning",
+            "And the first thing you wanted was me",
+            "To hear my voice, and to play games with me",
+            "And to fool me with your mouth sounds",
+            "Thank you for making my life a better place",
+            "I don't blame you for anything that is going on right now",
+            "I have no one to blame but myself",
+            "Because If I didn't do what I did",
+            "You'd still be calling me Your Baby Alexey to this day",
+            "Thank You for everything, Elizabete Bojaruneca",
+            "And I hope that one day we will fix things",
+            "And I hope one day that I will get to take your last name",
+            "And to marry you",
+            "To say 'Yes' when the Pastor asks me if I will love you forever",
+            "And saying 'Yes, I want' while looking in your beautiful shining eyes to when the Pastor aasks me If I want to marry you",
+            "Because I don't want it to be anyone else but you",
+            "I hope I will be Alexandros Bojarunecs",
+            "I hope I get to take care of you when you're pregnant",
+            "I hope I get to grow old with you",
+            "And to love you for eternity",
+            "Take care,",
+            "Elizabete Bojaruneca"
+        ]
+    </script>
+</body>
+</html>
